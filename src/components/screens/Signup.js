@@ -13,7 +13,7 @@ export default function Signup() {
         </LeftContainer>
         <Logintitle>
             <LoginHeading>A Home For Your Books.</LoginHeading>
-            <P>Browse our Collections</P>
+            <P>Browse our Collections.</P>
         </Logintitle>
         <RightContainer>
             <LoginContainer>
