@@ -2,43 +2,41 @@ import React,{useState,useContext} from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-export default function Signup() {
+export default function Login() {
   return (
     <Container>
-        <LeftContainer>
-            <HeaderContainer>
-                <Logo src= {require("../image/logo.png")}
-                />
-            </HeaderContainer>
-        </LeftContainer>
-        <Logintitle>
+    <LeftContainer>
+        <HeaderContainer>
+            <Logo src= {require("../image/logo.png")}
+            />
+        </HeaderContainer>
+    </LeftContainer>
+    <Logintitle>
             <LoginHeading>A Home For Your Books.</LoginHeading>
             <P>Browse our Collections</P>
-        </Logintitle>
-        <RightContainer>
-            <LoginContainer>
-                <LoginInfo>Please Login for an Account</LoginInfo>
-                <Form>
-                    <InputContanier>
-                        <TextInput type="text" placeholder="Enter Your Name" />
-                    </InputContanier>
-                    <InputContanier>
-                         <TextInput type="email" placeholder="Enter Your Eamil" />
-                    </InputContanier>     
-                    <InputContanier>
-                        <TextInput type="email" placeholder="Enter Your Password" />
-                    </InputContanier>       
-                    <LoginButton to='/login'>Log In</LoginButton>     
-                    <ButtonContainer>
-                        <SubmitButton>Sign Up</SubmitButton>
-                        </ButtonContainer>                         
-                </Form>
-            </LoginContainer>
+    </Logintitle>
+    <RightContainer>
+        <LoginContainer>
+            <LoginInfo>Please Login if you have an Account</LoginInfo>
+            <Form>
+                <InputContanier>
+                     <TextInput type="email" placeholder="Enter Your Eamil" />
+                </InputContanier>     
+                <InputContanier>
+                    <TextInput type="password" placeholder="Enter Your Password" />
+                </InputContanier>       
+                <LoginButton to='/signup'>Sign In</LoginButton>     
+                <ButtonContainer>
+                    <SubmitButton>Login Up</SubmitButton>
+                    </ButtonContainer>                         
+            </Form>
+        </LoginContainer>
 
 
-        </RightContainer>
+    </RightContainer>
 
-    </Container>
+</Container>
+
   )
 }
 
@@ -66,13 +64,13 @@ display: block;
 width: 100%;
 `;
 const RightContainer = styled.div`
-background: #1b4040;
+background: #7d3538;
 width: 40%;
 display: flex;
 align-items: flex-end;
 justify-content: center;
 border-radius: 20px;
-padding:70px 70px;
+padding: 70px 70px;
 background-color: #7d3538;
 `;
 const LoginContainer = styled.div`
@@ -98,11 +96,12 @@ const LoginInfo = styled.p`
 font-size: 18px;
 margin-bottom: 35px;
 color: #fff;
- `;
 
+ `;
  const Form = styled.form`
 width: 100%;
 display: block;
+
  `;
 const InputContanier = styled.div`
 margin-bottom: 15px;
@@ -118,6 +117,7 @@ border: none;
 border-radius: 10px;
 font-size: 18px;
 outline: none;
+
 `;
 
 const LoginButton = styled(Link)`
@@ -126,6 +126,7 @@ justify-content: flex-end;
 margin-bottom: 25px;
 color: #f5f2ed;
 font-size: 20px;
+
 `;
 const ButtonContainer =  styled.div`
 display: flex;
@@ -136,8 +137,7 @@ font-size: 17px;
 color: red;
 margin-bottom: 25px;
 text-align: center;
-`
-
+`;
 const SubmitButton = styled.button`
 background: #a5a0a0;
 border: 0;
@@ -148,4 +148,5 @@ border-radius: 8px;
 font-size: 20px;
 cursor: pointer;
 font-weight: 600;
+
 `
